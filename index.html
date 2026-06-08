@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asal Sayı Kontrolü</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+
+    <main class="container">
+        <div class="card" id="card">
+            <div class="card-header">
+                <h1>Asal Sayı Kontrolü</h1>
+                <p class="subtitle">Sayıyı yaz, kontrol et — sonuç ekranda belirir.</p>
+            </div>
+
+            <div class="ekran" id="ekran">
+                <div class="ekran-ust">
+                    <span class="ekran-nokta"></span>
+                    <span class="ekran-nokta"></span>
+                    <span class="ekran-nokta"></span>
+                    <span class="ekran-baslik">sonuç ekranı</span>
+                </div>
+                <div class="ekran-icerik">
+                    <p class="ekran-sayi" id="ekran-sayi">—</p>
+                    <p class="ekran-cumle" id="ekran-cumle">Henüz kontrol yapılmadı</p>
+                </div>
+                <div class="damga hidden" id="damga">
+                    <span id="damga-yazi">ASAL</span>
+                </div>
+            </div>
+
+            <form id="asal-form" class="form">
+                <div class="input-group">
+                    <label for="sayi">Sayınız</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">#</span>
+                        <input type="text" id="sayi" name="sayi" placeholder="Örn: 17, 23, 97" required autocomplete="off">
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <span>Kontrol Et</span>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="asal.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
